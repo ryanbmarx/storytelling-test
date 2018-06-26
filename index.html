@@ -6,15 +6,46 @@
 </head>
 <body>
 	<div class='main-content'>
-		<aside class='note'>
-			<p>The URL variable `page=&lt; int >` refers to the JSON array index of the displayed story. The requested nav elements below the "story" will refer to the next/previous index.</p>
-		</aside>
 		<article>
-			<h1 class="headline">This is a test headline</h1>
-			<h2 class="dek">This is a test dek.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus, in, accusantium harum est delectus quidem impedit at sit perferendis aperiam doloribus illo itaque inventore ipsa aut! Doloremque, nesciunt vero.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus, in, accusantium harum est delectus quidem impedit at sit perferendis aperiam doloribus illo itaque inventore ipsa aut! Doloremque, nesciunt vero.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus, in, accusantium harum est delectus quidem impedit at sit perferendis aperiam doloribus illo itaque inventore ipsa aut! Doloremque, nesciunt vero.</p>
+			<header>
+				<h1 class="headline">This is a test headline</h1>
+				<h2 class="dek">This is a test dek.</h2>
+			</header>
+			<section class='mainEntityOnPage'>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus, in, accusantium harum est delectus quidem impedit at sit perferendis aperiam doloribus illo itaque inventore ipsa aut! Doloremque, nesciunt vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus, in, accusantium harum est delectus quidem impedit at sit perferendis aperiam doloribus illo itaque inventore ipsa aut! Doloremque, nesciunt vero.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minus, in, accusantium harum est delectus quidem impedit at sit perferendis aperiam doloribus illo itaque inventore ipsa aut! Doloremque, nesciunt vero.</p>
+			</section>
+			<nav class="refers">
+				<ul>
+					<li class='refer refer--previous' style="background-image:url(https://www.gannett-cdn.com/labs/sdt/image-001.jpg)">
+						<div class='refer__text'>
+							<small class='refer__kicker'>Previous reading</small>
+							<h2 class='refer__headline'>
+								<a href='/?x-1>' class='refer__link'>This is a test headline This is a test headline</a>
+							</h2>
+							<small class='refer__readtime'>8 minute read</small>
+						</div> 
+						<div class='refer__icon'>
+							<img class='' src='img/arrow.svg' alt="" />
+						</div>
+					</li>
+					<li class='refer refer--next' style="background-image:url(https://www.gannett-cdn.com/labs/sdt/image-001.jpg)">
+						<div class='refer__text'>
+							<small class='refer__kicker'>Keep reading</small>
+							<h2 class='refer__headline'>
+								<a href='/?x-1>' class='refer__link'>This is a test headl ineThis is a test headline</a> 
+							</h2>
+							<small class='refer__readtime'>8 minute read</small>
+						</div> 
+						<div class='refer__icon'>
+							<img class='' src='img/arrow.svg' alt="" />
+						</div>
+						
+					</li>
+				</ul>
+				
+			</nav>
 		</article>
 	</div>
 	<script type="text/javascript" src="js/app.min.js"></script>

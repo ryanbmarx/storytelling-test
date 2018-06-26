@@ -1,32 +1,94 @@
+// --------------
 // VARIABLES
+// --------------
+
 $grid-gap: 30px;
 
+$refer-min-width: 300px;
+$refer-padding: $grid-gap * 2;
+$refer-color-text: white;
+$refer-icon-width: 50px;
+
+// --------------
 // MIXINS
+// --------------
 
+%serif{
+	font: 18px/1.4em 'Georgia', serif;
+	margin: 1rem 0;
+}
 
+%sans{
+	font: 16px/1.3em 'Arial', sans-serif;
+	margin: 1rem 0;
+}
+
+// --------------
+// IMPORTS
+// --------------
+
+@import 'refer';
+
+// --------------
 // STYLES
-
+// --------------
 .main-content{
 	max-width: 800px;
 	margin: auto;
 }
 
 p{
-	font: 18px/1.4em 'Georgia', serif;
-	margin: 1em 0;
+	@extend %serif;
 }
 
-.note{
-	box-sizing: border-box;
-	padding: $grid-gap / 2;
-	background: #eee;
-	margin: 1em 0;
-	p{
-		font-size: 16px;
-		font-family: "Arial", sans-serif;
+.headline{
+	@extend %serif;
+	font-size: 3em;
+}
+
+.dek{
+	@extend %serif;
+	font-size: 1.3em;
+}
+
+
+// .note{
+// 	box-sizing: border-box;
+// 	padding: $grid-gap / 2;
+// 	background: #eee;
+// 	margin: 1em 0;
+
+// 	p{
+// 		@extend %sans;
+// 	}
+// }
+
+
+.refers{
+	background: black;
+	ul{
+		list-style:none;
+		padding:0;
+		margin: 1em 0 0 0;
+
+		// Put the refers side-by-side
+		display:flex;
+		flex-wrap: wrap;
+
+		// They will stack when they can't be at least <$refer-min-width> length
+		& > *{
+			flex: 1 1 #{$refer-min-width};
+		}
 	}
 }
 
-.story-nav{
 
+.refer {
+	opacity: 0;
+	transition: all 150ms ease;
+
+	&:hover, &:focus{
+		opacity: 1;
+		transition: all 150ms ease;
+	}
 }

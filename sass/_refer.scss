@@ -1,0 +1,62 @@
+.refer {
+	display: flex;
+    align-items: center;
+	padding: $refer-padding;
+	box-sizing:border-box;
+    background-size: cover;
+
+	&__text{
+		flex: 1;
+		padding: 0 $grid-gap 0 0; // Adds seperation between icon and text
+
+	}
+	
+	&__kicker{
+		@extend %serif;
+		color: $refer-color-text;
+		font-weight: bold;
+	}
+
+	&__headline a{
+		@extend %serif;
+		color: $refer-color-text;
+		font-size: 1.2em;
+		text-decoration: none;
+	}
+
+	&__readtime{
+		@extend %sans;
+		color: $refer-color-text;
+		opacity: .75;
+	}
+
+	&__icon{
+		box-sizing: border-box;
+		width: $refer-icon-width;
+		height: $refer-icon-width;
+		padding: $refer-icon-width / 4;
+		border: 1px solid red;
+		border-radius: 50%;
+
+		display:flex;
+
+		img{
+			width: 100%;
+			margin: auto;
+		}
+	}
+}
+
+.refer.refer--previous{
+	
+	.refer__icon{
+		transform: rotate(180deg);
+		order: 1;
+	}
+
+	.refer__text{
+		order: 2;
+		padding: 0 0 0 $grid-gap;
+	}
+
+}
