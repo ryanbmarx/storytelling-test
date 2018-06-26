@@ -85,7 +85,7 @@
 
 @media all and (min-width: #{$refer-min-width * 2}){
 	.refer {
-		opacity: 0;
+		opacity: 0.4;
 		transition: all 150ms ease;
 
 		&:hover, &:focus{
