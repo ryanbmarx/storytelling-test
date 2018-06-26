@@ -27,7 +27,6 @@
 		flex: 1;
 		padding: 0 #{$refer-icon-padding} 0 0; // Adds seperation between icon and text
 		text-align: right;
-		
 	}
 	
 	&__kicker{
@@ -41,6 +40,7 @@
 		color: $refer-color-text;
 		font-size: 22px;
 		text-decoration: none;
+		margin: 1rem 0;
 	}
 
 	&__readtime{
