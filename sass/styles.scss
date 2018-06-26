@@ -4,7 +4,7 @@
 
 $grid-gap: 30px;
 
-$refer-min-width: 350px;
+$refer-min-width: 400px;
 $refer-padding: $grid-gap * 2;
 $refer-color-text: white;
 $refer-icon-width: 50px;
@@ -33,6 +33,11 @@ $refer-icon-padding: $grid-gap * 2;
 // --------------
 // STYLES
 // --------------
+
+body{
+	padding: 0;
+	margin: 0;
+}
 
 .main-content{
 	max-width: 1050px;
@@ -84,18 +89,4 @@ $refer-icon-padding: $grid-gap * 2;
 }
 
 
-.refer {
-	opacity: 0;
-	transition: all 150ms ease;
 
-	&:hover, &:focus{
-		opacity: 1;
-		transition: all 150ms ease;
-	}
-
-	&:focus-within{
-		// If any element inside the refer receieves focus, then the whole thing should show.
-		opacity: 1;
-		transition: all 150ms ease;		
-	}
-}
