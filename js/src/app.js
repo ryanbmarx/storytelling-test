@@ -6,9 +6,14 @@ const kickers = {
 };
 
 function getCurrentStory(){
+	// Fetches the story id from the url
 	return Number(location.href.split("?")[1]);
 }
 
+function addStoryMeta(story){
+	document.querySelector('#headline').innerHTML = story.headline;
+	document.querySelector('#image img').setAttribute('src', story.image)
+}
 
 function addRefer(target, story){
 	console.log('target is', target, story);
@@ -18,16 +23,15 @@ function addRefer(target, story){
 	referContainer.style.backgroundImage = `url(${story.image})`;
 
 	referContainer.innerHTML = `<div class='refer__text'>
-							<small class='refer__kicker'>${kickers[target]}</small>
-							<h2 class='refer__headline'>
-								<a href='/${story.url}' class='refer__link'>${story.headline}</a>
-							</h2>
-							<small class='refer__readtime'>${story.readtime.replace('min', 'minute')} read</small>
-						</div> 
-						<div class='refer__icon'>
-							<img class='' src='img/arrow.svg' alt="" />
-						</div>`;
-
+			<small class='refer__kicker'>${kickers[target]}</small>
+			<h2 class='refer__headline'>
+				<a id='refer-${target}-headline' href='/${story.url}' class='refer__link'>${story.headline}</a>
+			</h2>
+			<small class='refer__readtime'>${story.readtime.replace('min', 'minute')} read</small>
+		</div> 
+		<a class='refer__icon' aria-hidden='true' aria-describedby='refer-${target}-headline' href='/${story.url}'>
+			<img class='' src='img/arrow.svg' alt="" />
+		</a>`;
 }
 
 
@@ -54,14 +58,24 @@ window.addEventListener('DOMContentLoaded', function(e){
 	console.log('DOMContentLoaded');
 	fetch("https://www.gannett-cdn.com/labs/sdt/developer-mock-nav.json")
 	  .then(function(response) {
+	    // Parse the fetched infomation into sweet JSON.
 	    return response.json()
 	  }).then(function(json) {
+
+	  	// For demo purposes, add theheadline and image to the page
+	  	addStoryMeta(json["items"][getCurrentStory() - 1])
+
 	  	// Fill out the refers
 	    addRefers(json["items"], getCurrentStory());
+	  
 	  }).then(function(){
+
 	  	// Reveal the refers in all their glory
 	  	document.querySelector('#refers').style.opacity = 1;
+
 	  }).catch(function(ex) {
+
+	  	// Oops
 	    console.log('parsing failed', ex)
 	  });
 })

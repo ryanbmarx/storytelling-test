@@ -39,15 +39,27 @@ $refer-icon-padding: $grid-gap * 2;
 	margin: auto;
 }
 
+.header, .mainEntityOnPage{
+	max-width: 600px;
+	margin: auto;
+}
 
 .headline{
 	@extend %serif;
 	font-size: 3em;
 }
 
-.dek{
-	@extend %serif;
-	font-size: 1.3em;
+.image{
+	margin: 1em 0;
+	padding: 0;
+
+	img{
+		max-width: 100%;
+	}
+}
+
+.header{
+
 }
 
 .refers{
