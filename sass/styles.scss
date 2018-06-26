@@ -10,18 +10,41 @@ $refer-color-text: white;
 $refer-icon-width: 50px;
 $refer-icon-padding: $grid-gap * 2;
 
+$display-font-light: "UnifySerif";
+
 // --------------
 // MIXINS
 // --------------
 
 %serif{
-	font: 16px/1.4em 'Georgia', serif;
+	font: 16px/1.4em 'UnifySerif', 'Georgia', serif;
 	margin: 0 0 1rem 0;
 }
 
 %sans{
 	font: 14px/1.3em 'Arial', sans-serif;
 	margin: 0 0 1rem 0;
+}
+
+
+@font-face {
+    font-family: 'UnifySerif';
+    src: url('../fonts/UnifySerif_W_SBd.woff2') format('woff2'); 
+
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+	unicode-range: U+000-5FF; /* Latin glyphs */
+}
+
+@font-face {
+    font-family: 'UnifySerif';
+    src: url('../fonts/UnifySerif_W_Bd.woff2') format('woff2'); 
+
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+	unicode-range: U+000-5FF; /* Latin glyphs */
 }
 
 // --------------
