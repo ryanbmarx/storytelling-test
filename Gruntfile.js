@@ -5,8 +5,7 @@ module.exports = function(grunt) {
   // etc.
   // You'll also have to install them using a command similar to:
   //     npm install --save jquery
-  var VENDOR_LIBRARIES = [
-  ];
+  var VENDOR_LIBRARIES = [];
 
   config.browserify = {
     options: {
