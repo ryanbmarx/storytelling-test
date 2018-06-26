@@ -34,5 +34,8 @@
     "> 1%",
     "last 2 versions",
     "ie >= 11"
-  ]
+  ],
+  "dependencies": {
+    "whatwg-fetch": "^2.0.4"
+  }
 }
