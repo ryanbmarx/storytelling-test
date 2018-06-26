@@ -20,7 +20,8 @@ function addRefer(target, story){
 	referContainer.innerHTML = `<div class='refer__text'>
 							<small class='refer__kicker'>${kickers[target]}</small>
 							<h2 class='refer__headline'>
-								<a href='/${story.url}' class='refer__link'>${story.headline}</h2>
+								<a href='/${story.url}' class='refer__link'>${story.headline}</a>
+							</h2>
 							<small class='refer__readtime'>${story.readtime.replace('min', 'minute')} read</small>
 						</div> 
 						<div class='refer__icon'>

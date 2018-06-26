@@ -4,23 +4,24 @@
 
 $grid-gap: 30px;
 
-$refer-min-width: 300px;
+$refer-min-width: 350px;
 $refer-padding: $grid-gap * 2;
 $refer-color-text: white;
 $refer-icon-width: 50px;
+$refer-icon-padding: $grid-gap * 2;
 
 // --------------
 // MIXINS
 // --------------
 
 %serif{
-	font: 18px/1.4em 'Georgia', serif;
-	margin: 1rem 0;
+	font: 16px/1.4em 'Georgia', serif;
+	margin: 0 0 1rem 0;
 }
 
 %sans{
-	font: 16px/1.3em 'Arial', sans-serif;
-	margin: 1rem 0;
+	font: 14px/1.3em 'Arial', sans-serif;
+	margin: 0 0 1rem 0;
 }
 
 // --------------
@@ -32,14 +33,12 @@ $refer-icon-width: 50px;
 // --------------
 // STYLES
 // --------------
+
 .main-content{
 	max-width: 1050px;
 	margin: auto;
 }
 
-p{
-	@extend %serif;
-}
 
 .headline{
 	@extend %serif;
@@ -51,23 +50,11 @@ p{
 	font-size: 1.3em;
 }
 
-
-// .note{
-// 	box-sizing: border-box;
-// 	padding: $grid-gap / 2;
-// 	background: #eee;
-// 	margin: 1em 0;
-
-// 	p{
-// 		@extend %sans;
-// 	}
-// }
-
-
 .refers{
 	background: black;
 	opacity: .1;
 	transition: all 150ms ease;
+
 	ul{
 		list-style:none;
 		padding:0;
@@ -78,7 +65,7 @@ p{
 		flex-wrap: wrap;
 
 		// They will stack when they can't be at least <$refer-min-width> length
-		& > *{
+		& > * {
 			flex: 1 1 #{$refer-min-width};
 		}
 	}
