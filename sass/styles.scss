@@ -1,0 +1,32 @@
+// VARIABLES
+$grid-gap: 30px;
+
+// MIXINS
+
+
+// STYLES
+
+.main-content{
+	max-width: 800px;
+	margin: auto;
+}
+
+p{
+	font: 18px/1.4em 'Georgia', serif;
+	margin: 1em 0;
+}
+
+.note{
+	box-sizing: border-box;
+	padding: $grid-gap / 2;
+	background: #eee;
+	margin: 1em 0;
+	p{
+		font-size: 16px;
+		font-family: "Arial", sans-serif;
+	}
+}
+
+.story-nav{
+
+}
