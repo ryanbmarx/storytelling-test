@@ -33,7 +33,7 @@ $refer-icon-width: 50px;
 // STYLES
 // --------------
 .main-content{
-	max-width: 800px;
+	max-width: 1050px;
 	margin: auto;
 }
 
@@ -66,6 +66,8 @@ p{
 
 .refers{
 	background: black;
+	opacity: .1;
+	transition: all 150ms ease;
 	ul{
 		list-style:none;
 		padding:0;

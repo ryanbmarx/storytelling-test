@@ -4,8 +4,26 @@
 	padding: $refer-padding;
 	box-sizing:border-box;
     background-size: cover;
+	position:relative;
+	
+	&:before{
+		content: "";
+		background: black;
+		height: 100%;
+		width: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: .5;
+
+		@supports (mix-blend-mode: multiply){
+			mix-blend-mode: multiply;
+		}
+	}
 
 	&__text{
+		position:relative;
 		flex: 1;
 		padding: 0 $grid-gap 0 0; // Adds seperation between icon and text
 
@@ -20,7 +38,7 @@
 	&__headline a{
 		@extend %serif;
 		color: $refer-color-text;
-		font-size: 1.2em;
+		font-size: 1.1em;
 		text-decoration: none;
 	}
 
@@ -31,6 +49,7 @@
 	}
 
 	&__icon{
+		position:relative;
 		box-sizing: border-box;
 		width: $refer-icon-width;
 		height: $refer-icon-width;
