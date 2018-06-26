@@ -80,4 +80,10 @@ $refer-icon-padding: $grid-gap * 2;
 		opacity: 1;
 		transition: all 150ms ease;
 	}
+
+	&:focus-within{
+		// If any element inside the refer receieves focus, then the whole thing should show.
+		opacity: 1;
+		transition: all 150ms ease;		
+	}
 }
