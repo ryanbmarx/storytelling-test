@@ -16,7 +16,6 @@ function addStoryMeta(story){
 }
 
 function addRefer(target, story){
-	console.log('target is', target, story);
 
 	const referContainer = document.querySelector(`#${target}`);
 
@@ -37,7 +36,6 @@ function addRefer(target, story){
 
 function addRefers(stories, currentStory){
 	// REMINDER: The stories are numbered from 1, the array begins at zero (like it should)
-	console.log("current story is", currentStory)
 	const indeces = {
 		previous: currentStory === 1 ? stories.length - 1 : currentStory - 2,
 		next: currentStory >= stories.length ? 0 : currentStory
@@ -46,7 +44,6 @@ function addRefers(stories, currentStory){
 	Object.keys(indeces).forEach(target => {
 		// For each index in the prev/next array of indeces, 
 		// get the desired info and drop it onto the page
-		console.log(target, indeces, indeces[target])
 		addRefer(target, stories[indeces[target]]);
 	})
 	
@@ -55,7 +52,6 @@ function addRefers(stories, currentStory){
 
 
 window.addEventListener('DOMContentLoaded', function(e){
-	console.log('DOMContentLoaded');
 	fetch("https://www.gannett-cdn.com/labs/sdt/developer-mock-nav.json")
 	  .then(function(response) {
 	    // Parse the fetched infomation into sweet JSON.
